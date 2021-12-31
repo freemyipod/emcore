@@ -20,7 +20,8 @@ PPCFLAGS += -DASM_FILE
 preprocess = $(shell $(CC) $(PPCFLAGS) $(2) -E -P -x c $(1) | grep -v "^\#")
 preprocesspaths = $(shell $(CC) $(PPCFLAGS) $(2) -E -P -x c $(1) | grep -v "^\#" | sed -e "s:^..*:$(dir $(1))&:" | sed -e "s:^\\./::")
 
-REVISION := $(shell svnversion .)
+# TODO: extract revision from Git
+REVISION := 977
 REVISIONINT := $(shell echo $(REVISION) | sed -e "s/[^0-9].*$$//")
 
 TARGETS := $(call preprocess,TARGETS,-I.)
@@ -87,7 +88,7 @@ all: $(TARGETS)
 
 $(foreach target,$(TARGETS),$(eval $(call TARGET_template,$(target))))
 
-build/version.h: version.h ../../.svn/entries
+build/version.h: version.h
 	@echo [PP]     $<
 ifeq ($(shell uname),WindowsNT)
 	@-if not exist build md build
