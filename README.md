@@ -1,7 +1,7 @@
 # emCORE kernel
 emCORE is a lightweight alternative operating system for iPods (and possibly other devices one day).
 
-# Features
+## Features
 - Preemptive multitasking
 - Can run multiple independent apps at the same time
 - Shared library support
@@ -11,8 +11,8 @@ emCORE is a lightweight alternative operating system for iPods (and possibly oth
 - Can run other kernels (such as [Rockbox](https://www.rockbox.org/)) through a kexec-like interface
 - ~75KB executable size, ~110KB RAM usage (plus LCD frame buffer)
 
-# Installation instructions
+## Installation instructions
 There's an installation wizard available on [this page](https://freemyipod.org/wiki/EmCORE_Installation).
 
-# Uninstallation instructions
+## Uninstallation instructions
 There's an uninstallation wizard available on [this page](https://freemyipod.org/wiki/EmCORE_Uninstallation).
